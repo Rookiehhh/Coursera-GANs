@@ -1,0 +1,70 @@
+<!--
+   网站登录主页, 输入账号和密码, 点击登录按钮, 跳转到登录处理页面
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rookie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<form action="login.php" method="post">
+    <label for="username">用户名:</label>
+    <input type="text" name="username" id="username">
+    <br>
+    <label for="password">密码:</label>
+    <input type="password" name="password" id="password">
+    <br>
+    <input type="submit" value="登录">
+</form>
+<div style="margin-top: 20px; text-align: center;">
+    <p>或通过以下方式登录:</p>
+    <button onclick="window.location.href='https://open.weixin.qq.com/connect/qrconnect'">微信登录</button>
+    <button onclick="window.location.href='https://graph.qq.com/oauth2.0/authorize'">QQ登录</button>
+    <button onclick="window.location.href='https://accounts.google.com/o/oauth2/auth'">Google登录</button>
+</div>
+</body>
+</html>
